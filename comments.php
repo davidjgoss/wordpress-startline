@@ -14,9 +14,8 @@ if ( post_password_required() )
 	return;
 ?>
 
-<section id="comments">
-
-	<?php if ( have_comments() ) : ?>
+<?php if ( have_comments() ) : ?>
+	<section id="comments">
 		<h2><?php comments_number( "No comments", "1 comment", "% comments" ); ?> on <em><?php the_title(); ?></em></h2>
 		<ol><?php wp_list_comments( array( "style" => "ol" ) ); ?></ol>
 
@@ -30,15 +29,11 @@ if ( post_password_required() )
 		<?php if ( ! comments_open() ) : ?>
 			<p>Comments are now closed.</p>
 		<?php endif; ?>
-
-	<?php endif; ?>
-
-</section>
+	</section>
+<?php endif; ?>
 
 <?php
-
 /* Call either the standard Wordpress comment form, or our custom one (uncomment as desired) */
 //comment_form();
 get_template_part( "respond" );
-
 ?>
