@@ -39,6 +39,6 @@ if ( post_password_required() )
 
 /* Call either the standard Wordpress comment form, or our custom one (uncomment as desired) */
 //comment_form();
-get_template_part( "respond");
+get_template_part( "respond" );
 
 ?>
