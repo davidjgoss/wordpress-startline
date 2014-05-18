@@ -4,6 +4,5 @@ A template on which you can build a custom Wordpress theme. It's only slightly o
 
 ## Todo
 
-- Add custom comment form (with HTML5 input types)
 - Add Microdata to markup
 - Add Microformats 2 to markup

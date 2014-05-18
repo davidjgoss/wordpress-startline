@@ -35,4 +35,10 @@ if ( post_password_required() )
 
 </section>
 
-<?php comment_form(); ?>
+<?php
+
+/* Call either the standard Wordpress comment form, or our custom one (uncomment as desired) */
+//comment_form();
+get_template_part( "respond");
+
+?>
