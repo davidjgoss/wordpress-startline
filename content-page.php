@@ -6,17 +6,17 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>" itemscope itemtype="http://schema.org/Article">
 	<header>
-		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<h1 itemprop="headline"><?php the_title(); ?></h1>
 	</header>
 	
 	<footer>
-		<p>Updated on <time datetime="<?php the_modified_time( "c" ) ?>"><?php the_modified_time( "j F Y" ) ?></time></p>
+		<p>Updated on <time datetime="<?php the_modified_time( "c" ) ?>" itemprop="dateModified"><?php the_modified_time( "j F Y" ) ?></time></p>
 		<?php if ( comments_open() ) : ?>
 			<p><?php comments_popup_link( "No comments", "1 comment", "% comments", "", "Comments off" ); ?></p>
 		<?php endif; ?>
 	</footer>
 
-	<?php the_content(); ?>
+	<div itemprop="articleBody"><?php the_content(); ?>
 </article>
