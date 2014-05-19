@@ -6,13 +6,13 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<header>
-		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<h1 itemprop="headline"><a href="<?php the_permalink(); ?>" itemprop="url"><?php the_title(); ?></a></h1>
 	</header>
 	
 	<footer>
-		<p>Posted on <time datetime="<?php the_time( "c" ) ?>"><?php the_time( "j F Y" ) ?></time> by <?php the_author_posts_link(); ?></p>
+		<p>Posted on <time datetime="<?php the_time( "c" ) ?>" itemprop="datePublished"><?php the_time( "j F Y" ) ?></time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="<?php echo get_author_posts_url( get_the_author_meta( "ID" ) ); ?>" itemprop="url name"><?php the_author(); ?></a></span></p>
 		<p>Posted in <?php echo get_the_category_list( ", ", "", get_the_ID() ); ?>.</p>
 		<?php echo get_the_tag_list( "<p>Tagged with ", ", ", ".</p>" ); ?>
 		<?php if ( comments_open() ) : ?>
@@ -20,5 +20,5 @@
 		<?php endif; ?>
 	</footer>
 
-	<?php the_content(); ?>
+	<div itemprop="articleBody"><?php the_content(); ?></div>
 </article>
