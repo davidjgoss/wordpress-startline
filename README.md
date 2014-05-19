@@ -1,8 +1,10 @@
 # Wordpress Startline #
 
-A template on which you can build a custom Wordpress theme. It's only slightly opinionated, with relatively few features and no styling, just a simple baseline for standards-compliant, semantic, accessible blog markup.
+A template on which you can build a custom Wordpress theme, with no CSS or JavaScript --- just semantic, accessible markup with structured data.
 
 ## Todo
 
-- Add Microdata to markup
-- Add Microformats 2 to markup
+- Customised comments markup with Microdata
+- Microformats 2 classnames
+- Multiple languages support
+- Widgets support
