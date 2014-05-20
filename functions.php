@@ -5,7 +5,7 @@
  * @since Startline 0.9
  */
 
-function startine_wp_title($title, $sep, $seplocation)
+function startline_wp_title($title, $sep, $seplocation)
 {
 	// apply a custom title on certain types of page
 	$newtitle = "";
