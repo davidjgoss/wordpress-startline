@@ -29,10 +29,10 @@ if ( !comments_open() )
 				<textarea id="comment" name="comment"></textarea>
 			</li>
 			<li>
-				<input id="submit" name="submit" type="submit" value="Submit Comment" />
-				<?php comment_id_fields(); ?>
-				<?php do_action( "comment_form" , $post->ID); ?>
+				<input id="submit" name="submit" type="submit" value="Submit Comment" />		
 			</li>
 		</ol>
+		<?php comment_id_fields(); ?>
+		<?php do_action( "comment_form" , $post->ID); ?>
 	</form>
 </section>
