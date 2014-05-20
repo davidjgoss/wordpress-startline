@@ -18,5 +18,5 @@
 		<?php endif; ?>
 	</footer>
 
-	<div itemprop="articleBody"><?php the_content(); ?>
+	<div itemprop="articleBody"><?php the_content(); ?></div>
 </article>
