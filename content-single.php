@@ -16,7 +16,7 @@
 		<?php startline_category_list( get_the_ID(), ", ", "<p>Posted in ", ".</p>" ); ?>
 		<?php startline_tag_list( get_the_ID(), ", ", "<p>Tagged with ", ".</p>" ); ?>
 		<?php if ( comments_open() ) : ?>
-			<p><?php comments_popup_link( "No comments", "1 comment", "% comments", "", "Comments off" ); ?></p>
+			<p><a href="#comments"><span itemprop="commentCount"><?php comments_number( "0", "1", "%" ); ?></span> comments</a></p>
 		<?php endif; ?>
 	</footer>
 
