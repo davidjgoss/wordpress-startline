@@ -54,4 +54,24 @@ function startline_category_list( $postid, $sep, $before, $after )
 	echo $after;
 }
 
+
+function startline_tag_list( $postid, $sep, $before, $after )
+{
+	$post_tags = wp_get_post_tags( $postid );
+	if ( empty( $post_tags ) ) return;
+
+	echo $before . "<span itemprop=\"keywords\">";
+
+	$i = 0;	
+	foreach ( $post_tags as $t )
+	{
+		if ( $sep != "" && $i > 0 ) echo $sep;
+		$tag = get_tag( $t );
+		echo "<a href=\"" . esc_url( get_tag_link( $tag->term_id ) ) . "\">" . $tag->name . "</a>";
+		$i++;
+	}
+
+	echo "</span>" . $after;
+}
+
 ?>
