@@ -34,4 +34,24 @@ function startine_wp_title($title, $sep, $seplocation)
 }
 add_filter( "wp_title", "startline_wp_title", 10, 3 );
 
+
+function startline_category_list( $postid, $sep, $before, $after )
+{
+	$post_categories = wp_get_post_categories( $postid );
+	if ( empty( $post_categories ) ) return;
+
+	echo $before;
+
+	$i = 0;	
+	foreach ( $post_categories as $c )
+	{
+		if ( $sep != "" && $i > 0 ) echo $sep;
+		$category = get_category( $c );
+		echo "<a href=\"" . esc_url( get_category_link( $category->term_id ) ) . "\"><span itemprop=\"articleSection\">" . $category->name . "</span></a>";
+		$i++;
+	}
+
+	echo $after;
+}
+
 ?>
