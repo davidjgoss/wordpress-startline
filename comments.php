@@ -27,7 +27,7 @@ if ( post_password_required() )
 			"reply_text"		=> "Reply",
 			"page"				=> "",
 			"per_page"			=> "",
-			"avatar_size"		=> 0,
+			"avatar_size"		=> 64,
 			"reverse_top_level"	=> false,
 			"reverse_children"	=> "",
 			"format"			=> "html5",
