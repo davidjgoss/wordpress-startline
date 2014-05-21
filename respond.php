@@ -4,8 +4,6 @@
  * @subpackage Startline
  * @since Startline 0.9	
  */
-if ( !comments_open() )
-	return;
 
 $req = get_option( "require_name_email" );
 
