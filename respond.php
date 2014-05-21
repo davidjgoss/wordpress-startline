@@ -6,6 +6,9 @@
  */
 if ( !comments_open() )
 	return;
+
+$req = get_option( "require_name_email" );
+
 ?>
 
 <section id="respond">
