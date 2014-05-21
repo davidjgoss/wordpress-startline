@@ -18,7 +18,7 @@ $req = get_option( "require_name_email" );
 				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo "required"; ?> />
 			</li>
 			<li>
-				<label for="email">Email <?php if ($req) echo "(required)"; ?> (won't be published)</label><br />
+				<label for="email">Email <?php if ($req) : ?>(required, but won't be published)<?php else : ?>(won't be published)<?php endif; ?></label><br />
 				<input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" <?php if ($req) echo "required"; ?> />
 			</li>
 			<li>
