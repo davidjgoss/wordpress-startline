@@ -34,27 +34,27 @@ if ( post_password_required() )
 			"short_ping"		=> false,
 			"echo"				=> true
 		) ); ?></ol>
-
 		<?php if ( get_comment_pages_count() > 1 && get_option( "page_comments" ) ) : ?>
 			<nav>
 				<?php previous_comments_link( "Older comments" ); ?>
 				<?php next_comments_link( "Newer comments" ); ?>
 			</nav>
 		<?php endif; ?>
-
-		<?php if ( !comments_open() ) : ?>
-			<p>Comments are now closed.</p>
-		<?php elseif ( get_option( "comment_registration" ) && !is_user_logged_in() ) : ?>
-			<p><a href="<?php echo wp_login_url( get_permalink() . "#respond" ); ?>">Login to add a comment</a></p>
-		<?php else : ?>
-			<?php
-			/* Call either the standard Wordpress comment form,
-			or our custom one (uncomment as desired) */
-			//comment_form();
-			get_template_part( "respond" );
-			?>
-		<?php endif; ?>
 	</section>
+<?php endif; ?>
+
+
+<?php if ( !comments_open() ) : ?>
+	<p>Comments are now closed.</p>
+<?php elseif ( get_option( "comment_registration" ) && !is_user_logged_in() ) : ?>
+	<p><a href="<?php echo wp_login_url( get_permalink() . "#respond" ); ?>">Login to add a comment</a></p>
+<?php else : ?>
+	<?php
+	/* Call either the standard Wordpress comment form,
+	or our custom one (uncomment as desired) */
+	comment_form();
+	//get_template_part( "respond" );
+	?>
 <?php endif; ?>
 
 
