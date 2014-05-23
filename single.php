@@ -9,10 +9,7 @@
 get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<div itemscope itemtype="http://schema.org/BlogPosting">
-		<?php get_template_part( "content", "single" ); ?>
-		<?php comments_template(); ?>
-	</div>
+	<?php get_template_part( "content", "single" ); ?>		
 <?php endwhile; ?>
 
 <?php get_footer(); ?>
