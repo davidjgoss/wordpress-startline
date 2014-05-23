@@ -12,7 +12,7 @@ $req = get_option( "require_name_email" );
 <section id="respond">
 	<h2><?php comment_form_title( "Add a Comment", "Reply to <em>%s</em>" ); ?></h2>
 	<form method="post" action="<?php echo get_option( "siteurl" ); ?>/wp-comments-post.php">
-		<ol>
+		<ul>
 			<li>
 				<label for="author">Name <?php if ($req) echo "(required)"; ?></label><br />
 				<input id="author" name="author" type="text" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo "required"; ?> />
@@ -32,7 +32,7 @@ $req = get_option( "require_name_email" );
 			<li>
 				<input name="submit" type="submit" value="Submit Comment" />		
 			</li>
-		</ol>
+		</ul>
 		<?php comment_id_fields(); ?>
 		<?php do_action( "comment_form" , $post->ID); ?>
 	</form>
