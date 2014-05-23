@@ -6,7 +6,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" itemscope itemtype="http://schema.org/BlogPosting">>
+<article id="post-<?php the_ID(); ?>" itemscope itemtype="http://schema.org/BlogPosting">
 	<header>
 		<h1 itemprop="headline"><a href="<?php the_permalink(); ?>" itemprop="url"><?php the_title(); ?></a></h1>
 	</header>
