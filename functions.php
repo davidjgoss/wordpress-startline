@@ -74,4 +74,15 @@ function startline_tag_list( $postid, $sep, $before, $after )
 	echo "</span>" . $after;
 }
 
+function startline_comment_markup( $comment, $args, $depth )
+{
+	$GLOBALS["comment"] = $comment;
+	get_template_part( "comment-markup" );
+}
+
+function startline_comment_close( $comment, $args, $depth )
+{
+	echo "</li>";
+}
+
 ?>

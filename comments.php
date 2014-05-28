@@ -18,20 +18,9 @@ if ( post_password_required() )
 	<section id="comments">
 		<h2><?php comments_number( "No comments", "1 comment", "% comments" ); ?> on <em><?php the_title(); ?></em></h2>
 		<ol><?php wp_list_comments( array(
-			"walker"			=> null,
-			"max_depth"			=> "",
-			"style"				=> "ol",
-			"callback"			=> null,
-			"end-callback"		=> null,
+			"callback"			=> "startline_comment_markup",
+			"end-callback"		=> "startline_comment_close",
 			"type"				=> "all",
-			"reply_text"		=> "Reply",
-			"page"				=> "",
-			"per_page"			=> "",
-			"avatar_size"		=> 64,
-			"reverse_top_level"	=> false,
-			"reverse_children"	=> "",
-			"format"			=> "html5",
-			"short_ping"		=> false,
 			"echo"				=> true
 		) ); ?></ol>
 		<?php if ( get_comment_pages_count() > 1 && get_option( "page_comments" ) ) : ?>
