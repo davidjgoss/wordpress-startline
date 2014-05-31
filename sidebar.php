@@ -24,4 +24,6 @@
 	"order"           => "DESC"
 	) ); ?></ul>
 
+<?php if ( dynamic_sidebar( "startline_sidebar" ) ) : else : endif; ?>
+
 </main>

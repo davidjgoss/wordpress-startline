@@ -5,6 +5,19 @@
  * @since Startline 0.9
  */
 
+function startline_widgets_init() {
+
+	register_sidebar( array(
+		"name" => "Sidebar",
+		"id" => "startline_sidebar",
+		"before_widget" => "<section>",
+		"after_widget" => "</section>",
+		"before_title" => "<h2>",
+		"after_title" => "</h2>",
+	) );
+}
+add_action( "widgets_init", "startline_widgets_init" );
+
 function startline_wp_title($title, $sep, $seplocation)
 {
 	// apply a custom title on certain types of page
