@@ -1,7 +1,5 @@
 <?php
 /**
- * Displays the sidebar and footer on every template
- *
  * @package WordPress
  * @subpackage Startline
  */

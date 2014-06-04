@@ -1,8 +1,5 @@
 <?php
 /**
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
  * @package WordPress
  * @subpackage Startline
  */
