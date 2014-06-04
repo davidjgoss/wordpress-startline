@@ -2,7 +2,6 @@
 /**
  * @package WordPress
  * @subpackage Startline
- * @since Startline 0.9	
  */
 
 $req = get_option( "require_name_email" );

@@ -2,7 +2,6 @@
 /**
  * @package WordPress
  * @subpackage Startline
- * @since Startline 0.9
  */
 
 function startline_widgets_init() {

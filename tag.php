@@ -5,7 +5,6 @@
  *
  * @package WordPress
  * @subpackage Startline
- * @since Startline 0.9
  */
 
 get_header(); ?>

@@ -1,9 +1,7 @@
 <?php
 /**
- *
  * @package WordPress
  * @subpackage Startline
- * @since 1.0
  */
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
