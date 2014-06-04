@@ -18,6 +18,15 @@ function startline_widgets_init() {
 }
 add_action( "widgets_init", "startline_widgets_init" );
 
+function startline_img_sanitise($html)
+{
+	// strip obsolete align, width and height attributes from generated <img> tag
+	$pattern = '/ (?:align|width|height)=\"\w+\"/i';
+	$html = preg_replace($pattern, "", $html);
+	return $html;
+}
+add_filter( "get_image_tag", "startline_img_sanitise", 10, 1);
+
 function startline_wp_title($title, $sep, $seplocation)
 {
 	// apply a custom title on certain types of page
