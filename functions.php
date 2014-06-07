@@ -2,10 +2,17 @@
 /**
  * @package WordPress
  * @subpackage Startline
+ *
+ * Custom functions that can be called in templates,
+ * or uses for hooks and filters. Add yours at the
+ * bottom before the closing "?>"
  */
 
+// tell WordPress this theme uses HTML5
 add_theme_support( "html5", array( "search-form", "comment-form", "comment-list", "gallery", "caption" ) );
 
+
+// tell WordPress this theme supports widgets in the sidebar
 function startline_widgets_init() {
 	register_sidebar( array(
 		"name" => "Sidebar",
@@ -18,6 +25,8 @@ function startline_widgets_init() {
 }
 add_action( "widgets_init", "startline_widgets_init" );
 
+
+// strip align, width and height attributes from img tags
 function startline_img_sanitise($html)
 {
 	// strip obsolete align, width and height attributes from generated <img> tag
@@ -27,6 +36,8 @@ function startline_img_sanitise($html)
 }
 add_filter( "get_image_tag", "startline_img_sanitise", 10, 1);
 
+
+// customise the <title> tag format
 function startline_wp_title($title, $sep, $seplocation)
 {
 	// apply a custom title on certain types of page
@@ -57,6 +68,7 @@ function startline_wp_title($title, $sep, $seplocation)
 add_filter( "wp_title", "startline_wp_title", 10, 3 );
 
 
+// generate a clean list of a post's categories, with links
 function startline_category_list( $postid, $sep, $before, $after )
 {
 	$post_categories = wp_get_post_categories( $postid );
@@ -77,6 +89,7 @@ function startline_category_list( $postid, $sep, $before, $after )
 }
 
 
+// generate a clean list of a post's tags, with links
 function startline_tag_list( $postid, $sep, $before, $after )
 {
 	$post_tags = wp_get_post_tags( $postid );
@@ -96,12 +109,16 @@ function startline_tag_list( $postid, $sep, $before, $after )
 	echo "</span>" . $after;
 }
 
+
+// call custom comment markup template
 function startline_comment_markup( $comment, $args, $depth )
 {
 	$GLOBALS["comment"] = $comment;
 	get_template_part( "comment-markup" );
 }
 
+
+// close comment markup with </li> tag
 function startline_comment_close( $comment, $args, $depth )
 {
 	echo "</li>";

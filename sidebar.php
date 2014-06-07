@@ -2,6 +2,8 @@
 /**
  * @package WordPress
  * @subpackage Startline
+ *
+ * Template for the "sidebar"
  */
 ?>
 
@@ -24,5 +26,3 @@
 	) ); ?></ul>
 
 <?php if ( dynamic_sidebar( "startline_sidebar" ) ) : else : endif; ?>
-
-</main>

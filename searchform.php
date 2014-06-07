@@ -2,6 +2,9 @@
 /**
  * @package WordPress
  * @subpackage Startline
+ *
+ * Shows a site search form
+ * Note: Results can be formatted in search.php
  */
 ?>
 
