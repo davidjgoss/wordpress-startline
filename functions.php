@@ -4,8 +4,9 @@
  * @subpackage Startline
  */
 
-function startline_widgets_init() {
+add_theme_support( "html5", array( "search-form", "comment-form", "comment-list", "gallery", "caption" ) );
 
+function startline_widgets_init() {
 	register_sidebar( array(
 		"name" => "Sidebar",
 		"id" => "startline_sidebar",
