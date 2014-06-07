@@ -2,6 +2,8 @@
 /**
  * @package WordPress
  * @subpackage Startline
+ *
+ * The comments area after the post itself, including the list of comments and the respond form
  */
 
 if ( post_password_required() )
@@ -32,12 +34,7 @@ if ( post_password_required() )
 <?php elseif ( get_option( "comment_registration" ) && !is_user_logged_in() ) : ?>
 	<p><a href="<?php echo wp_login_url( get_permalink() . "#respond" ); ?>">Login to add a comment</a></p>
 <?php else : ?>
-	<?php
-	/* Call either the standard Wordpress comment form,
-	or our custom one (uncomment as desired) */
-	//comment_form();
-	get_template_part( "respond" );
-	?>
+	<?php get_template_part( "respond" ); ?>
 <?php endif; ?>
 
 
