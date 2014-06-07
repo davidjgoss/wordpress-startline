@@ -10,8 +10,8 @@ This theme template should be useful if you're building a blog or blog-centric s
 
 - Plain, concise wording where words are required
 - Valid, accessible HTML5 markup
-- Microdata attributes for posts, pages and comments
-- Microformats 2 classnames for posts
+- Microdata attributes for posts, pages and comments (that's the `itemtype`, `itemscope` and `itemprop` attributes you see)
+- Microformats 2 classnames for posts (that's the `h-entry`, `u-url`, `p-summary` and similar classnames you see)
 - Clean, customisable markup for comment form and comments
 - `img` tags without unnecessary `align`, `width` and `height` attributes
 - Links without unnecessary `title` attributes
