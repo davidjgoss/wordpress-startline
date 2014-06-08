@@ -7,12 +7,12 @@
  */
 ?>
 
+</main>
+
 <?php /* Call the sidebar code here, to save calling sidebar
        * and footer in every template, and make it easier
        * to remove the sidebar if we don't need it */
       get_sidebar(); ?>
-
-</main>
 
 <footer role="contentinfo">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></footer>
 
