@@ -25,7 +25,12 @@
 		<?php /* Show our clean tag list from functions.php */
 		      startline_tag_list( get_the_ID(), ", ", "<p>Tagged with ", ".</p>" ); ?>
 
-		<p><a href="#comments"><span itemprop="commentCount"><?php comments_number( "0", "1", "%" ); ?></span> comments</a></p>
+		<?php /* If comments aren't closed, link to the comment section */
+		      if ( comments_open() ) : ?>
+	    	
+	    	<p><a href="#comments"><span itemprop="commentCount"><?php comments_number( "0", "1", "%" ); ?></span> comments</a></p>
+
+	    <?php endif; ?>
 	
 	</footer>
 
