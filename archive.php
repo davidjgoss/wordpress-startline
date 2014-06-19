@@ -32,6 +32,11 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
+		<nav>
+			<?php previous_posts_link( "Newer Posts" ); ?>
+			<?php next_posts_link( "Older Posts" ); ?>
+		</nav>
+
 	<?php else : ?>
 
 		<?php get_template_part( "content", "none" ); ?>
