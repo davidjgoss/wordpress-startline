@@ -16,10 +16,12 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<nav>
-			<?php previous_posts_link( "Newer Posts" ); ?>
-			<?php next_posts_link( "Older Posts" ); ?>
-		</nav>
+		<?php if ( get_previous_posts_link() != null || get_next_posts_link() != null ) : ?>
+			<nav>
+				<?php previous_posts_link( "Newer Posts" ); ?>
+				<?php next_posts_link( "Older Posts" ); ?>
+			</nav>
+		<?php endif; ?>
 
 	<?php else : ?>
 
