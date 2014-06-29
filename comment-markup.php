@@ -53,6 +53,10 @@
 
 		<div itemprop="commentText"><?php comment_text(); ?></div>
 
+		<?php if ( $comment->comment_approved == "0" ) : ?>
+			<p>Your comment is awaiting moderation.</p>
+		<?php endif; ?>
+
 	</article>
 
 <?php /* No closing </li> tag is deliberate, to allow for nested comments, WordPress will add this for us */ ?>
